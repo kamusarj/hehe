@@ -1,0 +1,26 @@
+﻿<Window x:Class="QLBH.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLBH"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Thông tin đơn hàng cảu nhân viên có mã 1" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="600" FontFamily="Times New Roman" FontSize="30" FontWeight="Bold" />
+        <DataGrid x:Name="dginfo" HorizontalAlignment="Center" Height="142" Margin="0,50,0,0" VerticalAlignment="Top" Width="700" CanUserAddRows="False" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Số hóa đơn" Width="90" Binding="{Binding SoHD,Mode=OneWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tên sản phẩm" Width="130" Binding="{Binding Tensp,Mode=OneWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Số lượng" Width="90" Binding="{Binding Soluong,Mode=OneWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Đơn giá" Width="90" Binding="{Binding Dongia,Mode=OneWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Thành tiền" Width="90" Binding="{Binding ThanhTien,Mode=OneWay}"></DataGridTextColumn>
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontWeight" Value="Bold"></Setter>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+    </Grid>
+</Window>
